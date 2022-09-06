@@ -1,0 +1,22 @@
+Hi.
+
+Read this section carefully and and Act on it. thanks
+
+fill the functions and don't rename the variables.
+plaese code in clean code format and don't insert additional space and tab and enter and white space and etc :)))
+please commit after any change and clean work.
+hard working and for fill data work in its branch
+don't merge any branch and restore to old commit and leave it for me :)
+after finished a function delete the TODO comment
+write a very very very excellent docstring for functions and comment for any line that you write.
+please push your code after any commit until the make a problem with us.
+reformat your code with pycharm and vscode with autopep8
+search for anythings that you have question about that.
+ask me any question and don't be shy(that you don't -_-)
+
+Don't cry and be glad.
+Enjoy from coding.
+Don't be tierd.
+
+Thanks a lot.
+your best friend Amirmahdy(no Turani)

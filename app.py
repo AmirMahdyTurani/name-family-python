@@ -15,12 +15,28 @@ from multiprocessing.sharedctypes import Value
 from data import data
 from random import choice
 
-user_character = input(">>> ")
+# TODO check the user_character length just is 1
+user_character: str = input(">>> ")
 
 
-def return_character_data(character):
-    # TODO return a dictionary that contain data of character
-    pass
+def return_character_data(character: str) -> dict:
+    """a function that give a character and return the data of that character that saved on data.py
+
+    Args:
+        character (str): charracter that user entered
+
+    Returns:
+        dict: data of character
+    """
+    char_data = data.get(character)  # get data of character
+    # check that data isn't empty
+    try:
+        if char_data == None:
+            raise ValueError  # raise a value error if data is empty
+    except ValueError:
+        print("not found any data for this character in database.")  # show error message to user
+        exit()  # exit from app
+    return char_data
 
 
 character_data = return_character_data(user_character)
@@ -30,6 +46,7 @@ def choice_value_of_keys(dictionary: dict) -> dict:
     for key, value in dictionary.items():
         dictionary[key] = choice(value)
     return dictionary
+
 
 result = choice_value_of_keys(character_data)
 

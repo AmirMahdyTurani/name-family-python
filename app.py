@@ -31,7 +31,7 @@ def return_character_data(character: str) -> dict:
     char_data = data.get(character)  # get data of character
     # check that data isn't empty
     try:
-        if char_data == None:
+        if char_data is None:
             raise ValueError  # raise a value error if data is empty
     except ValueError:
         print("not found any data for this character in database.")  # show error message to user

@@ -7,7 +7,7 @@ authors:
 
 @ Amirmahdy Turani (amir1386mahdy.t@gmail.com)
 @ Parsa ZahedPasha (zahedpashaparsa1387@gmail.com)
-@ AmiAli Abgoun (add your email)
+@ AmiAli Abgoun (amiraliabgon@gmail.com)
 
 """
 
@@ -43,6 +43,7 @@ def return_character_data(character: str) -> dict:
 character_data = return_character_data(user_character)
 
 
+# TODO add docString and comment for this function
 def choice_value_of_keys(dictionary: dict) -> dict:
     for key, value in dictionary.items():
         dictionary[key] = choice(value)

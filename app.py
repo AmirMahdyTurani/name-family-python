@@ -11,12 +11,13 @@ authors:
 
 """
 
-from multiprocessing.sharedctypes import Value
 from data import data
 from random import choice
 
-# TODO check the user_character length just is 1
-user_character: str = input(">>> ")
+user_character = input(">>> ")
+
+if len(user_character) != 1:
+    print(f"you have an error!")
 
 
 def return_character_data(character: str) -> dict:
@@ -52,14 +53,18 @@ result = choice_value_of_keys(character_data)
 
 
 def show_result_to_user(result):
-    # TODO show the result to user in a beauty format
-    pass
+    print(f" حرف:{user_character}")
+    print("اسم | فامیل | شهر | کشور | رنگ | غذا | اشیاء")
+    print("-------------------------------------------------")
+    for word in result.values():
+        print(word, end=" | ")
 
 
 # final of project
+show_result_to_user(result)
 
 # wait for user
-input("\nPress any key to continue...")
+input("\n\nPress any key to continue...")
 
 # great! wh finished it! good luck:) YA.
 exit()

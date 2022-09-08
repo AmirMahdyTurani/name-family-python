@@ -14,10 +14,11 @@ authors:
 from data import data
 from random import choice
 
-user_character = input(">>> ")
+user_character = input("لطفا کاراکتر مورد نظر خود را وارد کنید: ")
 
-if len(user_character) != 1:
-    print(f"you have an error!")
+if len(user_character) > 1:
+    print(f"لطفا فقط یک حرف به زبان فارسی وارد کنید")
+    exit()
 
 
 def return_character_data(character: str) -> dict:
@@ -35,7 +36,7 @@ def return_character_data(character: str) -> dict:
         if char_data is None:
             raise ValueError  # raise a value error if data is empty
     except ValueError:
-        print("not found any data for this character in database.")  # show error message to user
+        print("هیچ اطلاعاتی برای این حرف پیدا نشد.")  # show error message to user
         exit()  # exit from app
     return char_data
 
@@ -43,7 +44,6 @@ def return_character_data(character: str) -> dict:
 character_data = return_character_data(user_character)
 
 
-# TODO add docString and comment for this function
 def choice_value_of_keys(dictionary: dict) -> dict:
     for key, value in dictionary.items():
         dictionary[key] = choice(value)
@@ -65,7 +65,7 @@ def show_result_to_user(result):
 show_result_to_user(result)
 
 # wait for user
-input("\n\nPress any key to continue...")
+input("\n\nبرای ادامه یک دکمه را فشار دهید...")
 
-# great! wh finished it! good luck:) YA.
+# great! we finished it! good luck:) YA.
 exit()

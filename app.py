@@ -15,7 +15,7 @@ from random import choice
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
+        MainWindow.setObjectName("اسم و فامیل")
         MainWindow.resize(800, 160)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -133,7 +133,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "اسم و فامیل"))
         self.groupBox.setTitle(_translate("MainWindow", "ورودی"))
         self.user_character.setItemText(0, _translate("MainWindow", "ا"))
         self.user_character.setItemText(1, _translate("MainWindow", "ب"))
